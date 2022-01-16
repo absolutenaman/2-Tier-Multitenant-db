@@ -43,8 +43,7 @@ app.post("/male",function(req,res){
     let Phone_number=req.body.Phone_number;
     console.log(name+" "+age+" "+Phone_number);
 
-   var x=mongoose.createConnection('mongodb://localhost:27017/'+name,{useNewUrlParser:true});
-    var personModel = x.model(name, Male_Schema);
+
        
     
     let comment1 = new personModel({
@@ -63,8 +62,7 @@ app.post("/female",function(req,res){
     let name=req.body.name;
     let age=req.body.age;
     let Email_id=req.body.Email_id;
-    var x=mongoose.createConnection('mongodb://localhost:27017/'+name,{useNewUrlParser:true});
-    var personModel2 = x.model(name, Male_Schema);
+   
     var comment1 = new personModel2({
         name: name,
         age: age,
